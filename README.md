@@ -1,1 +1,1 @@
-# URL : https://awesome-chat-210c6.web.app/
+# Hosting URL : https://awesome-chat-210c6.web.app/
