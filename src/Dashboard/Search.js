@@ -65,7 +65,7 @@ const SearchedUser = React.memo(({user, searchAction, groupUsers, group}) => {
     {
         return (
             <div className="searched-user" onClick={handleClick}>
-                {group && <input type="checkbox" checked={value} onChange={handleChange} className="search-user__checkbox" />}
+                {group && <input type="checkbox" checked={value} onChange={handleChange} onClick={handleChange} className="search-user__checkbox" />}
                 {user.photoURL ? 
                     <img src={user.photoURL} alt="Photo" title="Photo" className="searched-user__photo" />
                     :
