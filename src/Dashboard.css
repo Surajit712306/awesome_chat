@@ -1,0 +1,17 @@
+.dashboard__group 
+{
+    display: flex;
+}
+
+.dashboard__right 
+{
+    flex: 1;
+}
+
+@media screen and (min-width: 768px)
+{
+    .dashboard__right 
+    {
+        flex: 0.7;
+    }
+}

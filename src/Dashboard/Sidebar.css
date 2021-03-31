@@ -1,0 +1,201 @@
+
+.sidebar 
+{
+    box-shadow: 1px 0 1px rgba(0, 0, 0, 0.2);
+    height: 100vh;
+    background-color: rgba(238, 240, 241, 0.959);
+    scrollbar-width: none;
+    z-index: 100000;
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+    width: 0;
+    transition: all 300ms ease-out;
+}
+
+.sidebar.active 
+{
+    flex: 0.8;
+    width: 80%;
+    overflow: auto;
+}
+
+.sidebar::-webkit-scrollbar
+{
+    display: none;
+}
+
+.sidebar-header 
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 100;
+}
+
+.user-photo 
+{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: contain;
+    margin-right: 10px;
+    display: grid;
+    place-items: center;
+}
+
+.user-photo > svg 
+{
+    transform: scale(1.8);
+}
+
+.user-display-name-and-actions 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+}
+
+.user-display-name
+{
+    font-weight: 600;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.user-actions 
+{
+    padding:  5px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.user-actions:hover 
+{
+    background-color: rgba(200, 199, 199, 0.349);
+}
+
+.dropdown-btn.active 
+{
+    background-color: rgba(200, 199, 199, 0.349);
+}
+
+.search-chat
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+    position: sticky;
+    top: 65px;
+    background-color: white;
+    z-index: 20;
+}
+
+.search-chat__input
+{
+    border: none;
+    outline: none;
+    padding: 20px;
+    flex: 1;
+}
+
+.rooms 
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.room 
+{
+    display: flex;
+    padding: 10px;
+    background-color: white;
+    margin-bottom: 1px;
+    width: 100%;
+    transition: all 200ms  linear;
+    cursor: pointer;
+}
+
+.room:hover 
+{
+    background-color: rgba(231, 231, 231, 0.7);
+}
+
+.room.active 
+{
+    background-color: rgba(224, 239, 248, 0.726);
+}
+
+.room-photo 
+{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: contain;
+    margin: 0 10px;
+    display: grid;
+    place-items: center;
+}
+
+.room-photo  svg 
+{
+    transform: scale(1.8);
+}
+
+.room-details 
+{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.room-display-name 
+{
+    font-weight: 600;
+    padding: 5px 0;
+}
+
+.last-message 
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.last-message__content 
+{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.last-message__time 
+{
+    margin-left: 10px;
+    white-space: pre;
+}
+
+
+@media screen and (min-width: 768px)
+{
+    .sidebar
+    {
+        position: static;
+        flex: 0.3;
+        overflow: auto;
+    }
+
+    .sidebar.active 
+    {
+        flex: 0.3;
+        overflow: auto;
+    }
+}

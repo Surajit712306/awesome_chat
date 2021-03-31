@@ -1,0 +1,288 @@
+
+.chat-room 
+{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.chat-room__header 
+{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(241, 243, 243);
+}
+
+.chat-room-photo 
+{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: contain;
+    margin: 0 10px;
+    display: grid;
+    place-items: center;
+}
+
+.chat-room-photo  svg 
+{
+    transform: scale(1.8);
+}
+
+.chat-room-display-name 
+{
+    font-weight: 600;
+}
+
+.chat-room__chat-box 
+{
+    flex: 1;
+    scrollbar-width: none;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: auto;
+    scrollbar-width: none;
+    position: relative;
+}
+
+.chat-room__chat-box::-webkit-scrollbar
+{
+    display: none;
+}
+
+.message
+{
+    width: 40%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(155, 238, 122);
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.message.sender
+{
+    align-self: flex-end;
+    background-color: rgb(199, 210, 245);
+}
+
+.message-sender
+{
+    margin-bottom: 5px;
+    padding: 5px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: rgb(226, 247, 226);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.message.sender .message-sender
+{
+    background-color: honeydew;
+}
+
+.message-date 
+{
+    background-color: rgb(187, 245, 255);
+    align-self: center;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 5px;
+    z-index: 80;
+}
+
+.message-info 
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.message-text__content
+{
+    padding: 5px;
+    word-wrap: break-word;
+    text-align: justify;
+}
+
+.message-time
+{
+    align-self: flex-end;
+    white-space: pre;
+}
+
+.message-info-file 
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.message-file__name
+{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.message-file__download
+{
+    align-self: center;
+    background-color: white;
+    padding: 5px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.message-loading 
+{
+    position: fixed;
+    top: 40%;
+    right: 35%;
+    z-index: 100;
+}
+
+.message-error 
+{
+    padding: 0 10px;
+    position: fixed;
+    top: 60px;
+    z-index: 100;
+}
+
+.chat-room__form
+{
+    display: flex;
+    padding: 10px;
+    background-color: rgb(233, 233, 233);
+}
+
+.text-message 
+{
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 18px;
+    padding: 0 10px;
+    padding-top: 10px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+    resize: none;
+    overflow: auto;
+    scrollbar-width: none;
+    border-radius: 10px;
+}
+
+.text-message::-webkit-scrollbar
+{
+    display: none;
+}
+
+.chat-room__form-submit
+{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: rgb(233, 233, 233);
+    display: grid;
+    place-items: center;
+    padding: 0 5px;
+    color: green;
+}
+
+.message-files 
+{
+    display: none;
+}
+
+.message-input-group 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5px;
+    position: relative;
+}
+
+.message-input-error
+{
+    margin: 0 10px;
+}
+
+.message-files-label 
+{
+    padding: 5px;
+    border-radius: 50%;
+    transition: all 300ms linear;
+    position: relative;
+}
+
+.message-files-label:hover
+{
+    background-color: rgb(204, 211, 204);
+}
+
+.message-files-label svg 
+{
+    transform: scale(1.2);
+}
+
+.message-files-details 
+{
+    position: absolute;
+    z-index: 100;
+    bottom: 60px;
+    left: 20px;
+    width: max-content;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2), 0 2px 2px  rgba(0, 0, 0, 0.2);
+    max-height: 60vh;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.message-files-details::-webkit-scrollbar 
+{
+    display: none;
+}
+
+.message-file-details
+{
+    padding: 5px;
+} 
+
+.file-upload
+{
+    position: fixed;
+    right: 20px;
+    bottom: 120px;
+    display: flex;
+    padding: 10px;
+    background-color: rgb(248, 185, 130);
+    z-index: 90;
+    border-radius: 5px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+.file-upload__name
+{
+    max-width: 30vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.file-upload__percentage
+{
+    margin-left: 10px;
+    font-weight: 500;
+}

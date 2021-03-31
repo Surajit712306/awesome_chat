@@ -1,0 +1,15 @@
+.add-new-chat__heading
+{
+    padding: 15px 10px;
+    font-weight: 500;
+}
+
+.add-new-chat__header
+{
+    display: flex;
+}
+
+.add-new-chat__loading 
+{
+    flex: 1;
+}

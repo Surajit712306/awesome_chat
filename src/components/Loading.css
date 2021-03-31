@@ -1,0 +1,45 @@
+
+.loading 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.loading__content 
+{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent;
+    background-color: transparent;
+    animation: loadingrotate 1s linear forwards infinite;
+}
+
+@keyframes loadingrotate
+{
+    0%
+    {
+        border-color: transparent;
+    }
+    25%
+    {
+        border-color: royalblue transparent transparent transparent;
+    }
+    50%
+    {
+        border-color: royalblue royalblue transparent transparent;
+    }
+    75%
+    {
+        border-color: royalblue royalblue royalblue transparent;
+    }
+    100%
+    {
+        transform: rotate(360deg);
+        border-color: royalblue royalblue royalblue royalblue;
+    }
+}
