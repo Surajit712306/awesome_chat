@@ -269,11 +269,11 @@ function Sidebar() {
             return;
         }
 
+        const valueSet = new Set(value.toLowerCase().split(''));
         const _searchedRooms = roomsDetails.filter(room => {
             const roomDisplayNameSet = new Set(room.displayName.toLowerCase().split(''));
-            const valueSet = new Set(value.toLowerCase().split(''));
             const intersection = [...valueSet].filter(ch => roomDisplayNameSet.has(ch));
-            return intersection.length > 0;
+            return intersection.length === [...valueSet].length;
         });
 
         setSearchedRooms(_searchedRooms)
